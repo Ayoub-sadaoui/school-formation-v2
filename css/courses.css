@@ -12,88 +12,103 @@
 /* ========-global-========== */
 /* ========================== */
 .section-container {
-  padding: 0px 40px;
+  padding: 0px 100px;
 }
 .btn {
   box-sizing: border-box;
-  font-weight: 700;
-  font-size: 20px;
-  letter-spacing: 0em;
-
+  border: none;
+  width: auto;
+  height: 40px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 8px 15px;
-  color: white;
-  background-color: #222222;
-  border-radius: 8px;
+  padding: 15px;
   box-shadow: 0px 0.7065919983928324px 0.7065919983928324px -0.625px rgba(0, 0, 0, 0.15),
     0px 1.8065619053231785px 1.8065619053231785px -1.25px rgba(0, 0, 0, 0.14398),
     0px 3.6217592146567767px 3.6217592146567767px -1.875px rgba(0, 0, 0, 0.13793),
     0px 6.8655999097303715px 6.8655999097303715px -2.5px rgba(0, 0, 0, 0.12711),
     0px 13.646761411524492px 13.646761411524492px -3.125px rgba(0, 0, 0, 0.10451),
     0px 30px 30px -3.75px rgba(0, 0, 0, 0.05);
+  background-color: #ff8a08;
+  overflow: visible;
+  align-content: center;
+  flex-wrap: nowrap;
+  gap: 10;
+  color: white;
+  border-radius: 8px;
 }
-
+.btn-outline {
+  background-color: rgba(33, 33, 33, 0);
+  color: #ff8a08;
+  border: 3px solid #ff8a08;
+}
 /* ========================== */
 /* ========-courses-========== */
 /* ========================== */
-.courses .c-hero {
-  display: flex;
-  /* justify-content: space-between; */
+.course {
+  position: relative;
 }
-.courses .main-img {
-  overflow: hidden;
-  min-height: 684px;
 
-  width: 50%;
-  min-width: 50%;
-}
-.courses .main-img img {
-  height: 100%;
+.course .img-background img {
   width: 100%;
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
-.courses .c-hero .content {
-  width: 50%;
-  max-width: 50%;
-  padding: 0px 50px;
+.course .course-container {
+  display: grid;
+  position: relative;
+  padding: 60px 0px;
+  place-items: center;
 }
-.courses .c-hero .content h2 {
-  padding-top: 100px;
-  width: 400px;
-  height: auto;
+.course .content {
+  box-sizing: border-box;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 37px;
+  background-color: rgba(250, 250, 250, 0.95);
+  align-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 20px;
+  border-radius: 20px;
+}
+
+.course .content h2 {
+  white-space: pre;
   overflow: visible;
   font-weight: 700;
-  font-style: normal;
-  font-family: "Inter", "Inter Placeholder", sans-serif;
   color: #333333;
-  font-size: 38px;
+  font-size: 50px;
   letter-spacing: -2px;
   line-height: 1.2;
 }
-.courses .c-hero .content h4 {
-  margin: 0;
-  padding-top: 20px;
+.course .content h4 {
+  width: auto;
+  height: auto;
+  white-space: pre;
   font-weight: 600;
-  font-style: normal;
-  font-family: "Inter", "Inter Placeholder", sans-serif;
   color: #1f1f1f;
   font-size: 20px;
   letter-spacing: -0.1px;
   line-height: 28px;
-  text-align: left;
 }
-.courses .c-hero .infromation {
+
+.course .infromation {
   display: flex;
   align-items: center;
   gap: 15px;
+  max-width: 432px;
 }
-.courses .c-hero .content p {
+.course .content p {
   margin: 8px 0px;
-  max-width: 90%;
-  /* word-wrap: break-word;
-  word-break: break-word; */
+
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -102,14 +117,14 @@
   letter-spacing: 0em;
 }
 
-.courses .btn-container {
+.course .btn-container {
   display: flex;
   align-items: center;
   margin-top: 20px;
   gap: 15px;
   align-content: center;
 }
-.courses .btn-container span {
+.course .btn-container span {
   font-weight: 700;
   font-style: normal;
   font-family: "Inter", "Inter Placeholder", sans-serif;
@@ -129,19 +144,18 @@
 .offer-container {
   display: flex;
   justify-content: space-between;
+  flex-direction: column;
   padding-right: 0;
   padding-top: 50px;
   padding-bottom: 50px;
 }
-.offer-content {
-  max-width: 483px;
-}
+
 .offer-container .img-container {
   height: 340px;
   width: 100%;
-  max-width: 40%;
   border-radius: 20px;
   overflow: hidden;
+  padding-bottom: 10px;
 }
 .offer-container .img-container img {
   background-size: contain;
@@ -154,6 +168,7 @@
   font-style: normal;
   font-family: "Inter", "Inter Placeholder", sans-serif;
   color: #333333;
+  max-width: 350px;
   font-size: 40px;
   letter-spacing: -2px;
   line-height: 1.2;
@@ -174,10 +189,18 @@
   letter-spacing: -0.5px;
   line-height: 1.5;
 }
+.offer-content {
+  display: flex;
+  justify-content: space-between;
+}
 .offers hr {
-  border-top: solid 2px;
+  border-top: solid 1px #525252;
 }
 
+.offer-container .offer-btn-side {
+  display: flex;
+  align-items: flex-end;
+}
 .offer-container .btn-container .btn {
   font-size: 14px;
 }
