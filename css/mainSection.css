@@ -27,7 +27,11 @@ h3 {
   align-items: center;
   position: relative;
 }
-
+.header-h1 {
+  color: #fff;
+  font-family: monospace;
+  font-size: 40px;
+}
 .header .profile-icon {
   height: 35px;
   width: 35px;
@@ -321,13 +325,14 @@ h3 {
   line-height: 1.4;
   width: 100%;
 }
-h3 .main-section .promotions .promotion span {
+.main-section .promotions .promotion span {
   height: auto;
   width: 100%;
   font-weight: 800;
   color: #ffffff;
   font-size: 44px;
   line-height: 1.2;
+  font-family: sans-serif;
 }
 .main-section .promotions .promotion h5 {
   font-weight: 600;
