@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
         echo json_encode(["status" => "success", "comments" => $comments]);
     } else {
-        echo json_encode(["status" => "success", "message" => "No comments found!"]);
+        echo json_encode(["status" => "success", "comments" => "No comments found!"]);
     }
 }
 
