@@ -64,7 +64,6 @@
 }
 .course .img-background {
   height: calc(100vh - 70px);
-  width: 100%;
   overflow: hidden;
   position: absolute;
   top: 0;
