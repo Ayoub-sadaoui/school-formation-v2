@@ -127,7 +127,6 @@
 .course .btn-container span {
   font-weight: 700;
   font-style: normal;
-  font-family: "Inter", "Inter Placeholder", sans-serif;
   color: #333333;
   font-size: 28px;
   letter-spacing: 0em;
@@ -166,7 +165,7 @@
 .offer-container h2 {
   font-weight: 700;
   font-style: normal;
-  font-family: "Inter", "Inter Placeholder", sans-serif;
+
   color: #333333;
   max-width: 400px;
   font-size: 40px;
@@ -183,7 +182,6 @@
 
   font-weight: 500;
   font-style: normal;
-  font-family: "Inter", "Inter Placeholder", sans-serif;
   color: #888888;
   font-size: 18px;
   letter-spacing: -0.5px;
