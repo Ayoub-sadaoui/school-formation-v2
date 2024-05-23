@@ -63,18 +63,19 @@
   position: relative;
 }
 .course .img-background {
-  height: calc(100vh - 70px);
-  overflow: hidden;
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  height: calc(100vh - 70px);
+  overflow: hidden;
 }
 .course .img-background img {
   width: 100%;
   position: absolute;
-
   top: 0;
   left: 0;
+
   z-index: -1;
 }
 .course .course-container {
@@ -82,6 +83,7 @@
   position: relative;
   padding: 20px 0px;
   place-items: center;
+  min-height: calc(100vh - 70px);
 }
 .course .content {
   box-sizing: border-box;
@@ -97,6 +99,7 @@
   flex-wrap: nowrap;
   gap: 10px;
   border-radius: 20px;
+  margin-bottom: 20px;
 }
 
 .course .content h2 {
@@ -184,7 +187,6 @@
 .offer-container h2 {
   font-weight: 700;
   font-style: normal;
-
   color: #333333;
   max-width: 400px;
   font-size: 40px;
